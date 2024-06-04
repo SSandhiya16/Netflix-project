@@ -1,0 +1,77 @@
+<html>
+<head>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+</head>
+<title>Pavithra Netflix Project</title><script>
+function validateForm(event){
+event.preventDefault();
+// var name=document.getElementById('name').value;
+var email=document.getElementById('email').value;
+// var mobile = document.getElementById('mobile').value;
+var password=document.getElementById('password').value;
+
+
+// var nameRegex=/^[a-z][A-Z]/;
+// if(!nameRegex.test(name)){
+//     alert('Incorrect username first letter must be caps');
+//     return false;
+// }
+var emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if(! emailRegex.test(email)){
+    alert('Invalid Email id');
+    return false;
+}
+if(password.length<6){
+    alert('Invalid password and Invalid email id');
+    return false;
+}
+
+// var mobileRegex = /^[1-9]\d{9}$/;
+// if(! mobileRegex.test(mobile)){
+//         alert( "Maximum '10' digit  mobile number is valid");
+//    return false;
+// }
+
+alert(" Login successfully ");
+  }
+        </script>
+   
+    
+    <body><center>
+        <link href="sign-in.css" rel="stylesheet">
+        <div class="navbar">
+        <li class="logo"><img src="Logonetflix.png"></li>
+    </div>
+        <h1>Sign In </h1>
+        <form id="myform" onsubmit="validateForm(event)">
+
+           
+        
+       
+
+        <label for="email">Email id:</label>
+        <input type="email" id="email" name="email"  placeholder="Enter your email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"  placeholder="Enter your password" required><br><br>
+    
+        
+       
+      
+
+        
+<table>
+
+       
+        <tr> <td>
+            <th>
+                <button class="buttons">Login</button>
+            <button class ="buttons"><a href="sign-up.html">Sign-up</a></button></th>
+        </td>
+    </tr>
+
+        
+    </table>
+    </form>
+    </center></body>
+</html>
